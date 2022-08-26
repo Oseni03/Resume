@@ -1,0 +1,16 @@
+<div class="container" id="contact-form">
+  {% include "partials/messages.html" %}
+  <form id="contactForm" hx-post="{% url 'resume:contact' %}" hx-target="#contact-form">
+      {% csrf_token %}
+      <label for="name">Name</label>
+      {{ form.name }}
+
+      <label for="email">Email</label>
+      {{ form.email }}
+
+      <label for="subject">Message</label>
+      {{ form.message }}
+
+      <input class='btn btnPrimary' type="submit" value="Submit">
+  </form>
+</div>

@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+  {{ blog.name }}
+{% endblock %}
+
+{% block content %}
+    <!-- ================================
+    Start Content
+    ================================= -->
+    <section>
+      <div class="innerPageBannerCol">
+        <div class="container">
+          <div class="row g-4 g-md-3  align-items-center">
+            <div class="col-md-6">
+              <div class="bannerContent">
+                <h1 class="xlTitle pb-md-3">{{ blog.name }}</h1>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-auto">
+              <div class="authorCol">
+                <h4 class="smTitle pb-3">{{ blog.author|title }}</h4>
+              </div>
+            </div>
+            <div class="col-md">
+              <h4 class="smTitle pb-3">{{ blog.date.date }}</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="sectionSpaceSm">
+        <div class="container">
+          <p>
+            {{ blog.body|safe }}
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- ================================
+    End Content
+    ================================= -->
+    
+{% endblock %}
