@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get("RESUME_SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = (os.environ.get("DEBUG_VALUE") == "True")
 
-ALLOWED_HOSTS = ["localhost", '']
+ALLOWED_HOSTS = ["localhost", 'p-resume.herokuapp.com']
 
 
 # Application definition
